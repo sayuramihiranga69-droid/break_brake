@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter --version:*)",
+      "Bash(dir:*)",
+      "Bash(test:*)",
+      "Bash(flutter create:*)",
+      "Bash(flutter pub get:*)",
+      "Bash(flutter analyze:*)",
+      "Bash(flutter devices:*)",
+      "Bash(flutter run:*)",
+      "WebFetch(domain:youtu.be)",
+      "WebFetch(domain:wreckfest2.thqnordic.com)",
+      "WebSearch",
+      "WebFetch(domain:www.dreamstime.com)",
+      "WebFetch(domain:en.wikipedia.org)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
