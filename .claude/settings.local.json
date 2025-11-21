@@ -26,7 +26,9 @@
       "Bash(\"C:\\Program Files\\Blender Foundation\\Blender 4.5\\blender.exe\" --background \"C:\\Users\\rober\\Git\\break_brake\\assets_source\\trucks\\kenworth_w900\\kenworth_scene.blend\" --python \"C:\\Users\\rober\\Git\\break_brake\\assets_source\\render_truck_16_angles.py\")",
       "Bash(python:*)",
       "Bash(rm \".\\nul\")",
-      "Bash(powershell -Command \"Remove-Item ''.\\nul'' -Force\")"
+      "Bash(powershell -Command \"Remove-Item ''.\\nul'' -Force\")",
+      "Bash(powershell -Command \"''{0:N2} MB'' -f ((Get-ChildItem -Path ''assets/images/trucks/'' -Recurse -File | Measure-Object -Property Length -Sum).Sum / 1MB); ''{0:N2} MB'' -f ((Get-ChildItem -Path ''assets_source/'' -Recurse -File | Measure-Object -Property Length -Sum).Sum / 1MB)\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''''assets/images/trucks/'''',''''assets_source/'''' -Recurse -File | Where-Object { $_ength -gt 1MB } | Select-Object -First 20 FullName,@{Name=''''SizeMB'''';Expression={''''{0:N2}'''' -f ($_ength / 1MB)}}\")"
     ],
     "deny": [],
     "ask": []
